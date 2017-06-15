@@ -1,0 +1,253 @@
+
+
+body {
+  background-color:#007ae5;
+  color:#fffde5;
+  font-family:'Slabo 27px',sans-serif;
+  font-weight:normal;
+  font-style:normal;
+}
+
+.header {
+  grid-area: hd;
+  padding-bottom:0px;
+  color:#fffde5;
+  //text-shadow: 1px 1px #ccc;
+  //text-transform:uppercase;
+  margin-bottom:0;
+}
+
+.caption {
+  padding:5px;
+  //color: #000;
+  color: #007ae5;
+  background-color: #fffde5;
+  width:670px;
+  text-shadow:none;
+  padding-left:15px;
+  //font-family: 'Oswald';
+  margin-bottom:9px;
+  border-radius:10px;
+  font-size:25px;
+}
+
+.blank {
+  grid-area: bl;
+}
+
+.wrapper {
+    display: grid;
+    background-color:#007ae5;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: minmax(0px, auto);
+    grid-template-areas:
+      ". . hd hd   hd hd  hd   hd   . . "
+      ". . sd sd sd sd sd sd . ."
+      ". . main main main main main main . .";
+
+}
+
+.button {
+  grid-area: button;
+  font-size:20px;
+  font-family:'Sabo 27px',sans-serif;
+}
+
+.button #percent {
+  font-size: 20px;
+  border-right:1px black solid;
+  border-top:1px black solid;
+  border-bottom: 1px black solid;
+  border-left:0;
+  padding:3.5px;
+  padding-left:0;
+
+  background-color:rgba(0, 0, 255, 0.2);
+  //height:18px;
+  border-radius:5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  color:#fffde5;
+  display:inline;
+  width:30px;
+  //font-family:'Sabo 27px';
+}
+
+#inflate_btn {
+  //border:0;
+  //margin:0;
+  //padding:5px;
+  width:220px;
+  height:32px;
+  font-size:20px;
+  border:1px #0056a3 solid;
+  border-right:0;
+  //font-family:'Oswald';
+  background-color:rgba(255, 66, 66,.85);
+  //color:#007ae5;
+  //color:#fffde5;
+  color:#fff;
+  letter-spacing: 2px;
+  border-radius:5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#inflation {
+  padding:5px;
+  margin:0;
+  border-left:1px black solid;
+  border-top:1px black solid;
+  border-bottom: 1px black solid;
+  border-right:1px black solid;
+  width:30px;
+  height:20px;
+  padding-left:5px;
+  padding-right:5px;
+  //margin-left:5px;
+  font-size: 20px;
+  //border-radius:5px;
+
+  background-color:rgba(255, 255, 255, 0.1);
+  color:#fffde5;
+
+}
+
+.text {
+  grid-area: text;
+}
+
+.wrapper2 {
+  width:800px;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-areas:
+    "inc inc inc inc inc inc inc inc inc inc button button button button button button button button"
+}
+
+canvas {
+  border:0px solid #d3d3d3;
+  margin-top:-10px;
+  z-index:-1;
+}
+
+
+
+header {
+  font-family: 'Oswald', sans-serif;
+  font-size:45px;
+  font-weight:bold;
+  margin-bottom:5px;
+  letter-spacing: 5px;
+  font-weight:800;
+  text-transform: uppercase;
+  font-style:normal;
+}
+
+.footer {
+    grid-area: ft;
+    //font-family:Arial;
+    font-size:12px;
+    padding-top:0;
+    margin-bottom:10px;
+}
+.content {
+    grid-area: main;
+    margin-bottom:-20px;
+    //margin-bottom:5px;
+}
+.sidebar {
+    grid-area: sd;
+}
+
+/*#footer {
+  display:none;
+  text-align:justify;
+  position:fixed;
+  bottom:300px;
+  width:450px;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding:10px;
+  left:10%;
+}*/
+
+#footer {
+  grid-area:ft;
+  display:none;
+  text-align:justify;
+  //position:absolute;
+  //bottom:495px;
+  //left:455px;
+  //padding:10px;
+  font-size:14px;
+  //width:670px;
+  //font-family:Verdana;
+
+  color: #007ae5;
+  background-color: #fffde5;
+  width:685px;
+  text-shadow:none;
+  padding-left:15px;
+  border-radius:10px;
+  font-size:20px;
+}
+
+#footer_blank {
+  grid-area:ft;
+  //display:none;
+  text-align:justify;
+  //position:absolute;
+  //bottom:495px;
+  //left:455px;
+  //padding:10px;
+  font-size:1px;
+  width:670px;
+  //font-family:Verdana;
+
+  color: #007ae5;
+  background-color: #fffde5;
+  width:685px;
+  text-shadow:none;
+  //padding-left:5px;
+  border-radius:10px;
+}
+
+#footer span {
+  font-size: 18px;
+  //border-right:1px black solid;
+  //border-top:1px black solid;
+  //border-bottom: 1px black solid;
+  padding:1px;
+  background-color:#fff;
+  color: #fc0202;
+}
+
+#footer strong {
+  font-size: 18px;
+  color: #fc0202;
+  background-color:#fff;
+  padding:1px;
+}
+
+p {
+  //margin-top:120px;
+  //background-color: rgba(0, 0, 255, 0.2);
+  //border:1px rgba(245, 0, 0, 0.2) solid;
+  padding:5px 20px;
+  padding-left:5px;
+  margin:0;
+  margin-bottom:50px;
+}
+
+#increase {
+  border:0;
+  //background-color:#fff;
+  font-size:16px;
+  grid-area:inc;
+}
+
+
+div {
+  //border: 1px solid black;
+}

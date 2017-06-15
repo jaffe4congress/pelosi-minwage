@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="jaffe-chart.css">
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <header>The Pelosi Minimum Wage Plan</header>
+    <section class="caption">Nancy Pelosi wants you to believe she's increasing the minimum wage from
+      $7.25 an hour to $15 dollars an hour, but actually...</section>
+      <div class="wrapper2">
+      <section class="button"><button id="inflate_btn">INFLATE-O-MATIC</button><input type="text" id="inflation" value="2.0"><button id="percent">%</button></section>
+      <span id="increase">Press the red button to see what happens to <br>your Pelosi wage increase!</span>
+
+      </div>
+  </div>
+  <div class="sidebar">
+  <section id="canvas"><canvas id="myCanvas">
+  Your browser does not support the HTML5 canvas tag.</canvas></section>
+  </section>
+</div>
+
+  <div class="content">
+    <!--<section id="footer_blank"><p>&nbsp;</p></section>-->
+    <section id="footer"><p>Pelosi's plan only gets you to <strong>$<span id="minwage"></span></strong> in 2017 dollars. Incremental minimum
+      wage cheats the worker because it ignores the effects of inflation.
+      Inflation varies over the years, and it's hard to predict when it will go up or down. So if you want to make 15 dollars an hour, the minimum wage should
+      go up to 17 dollars  by 2024. Pelosi's plan just doesn't hold up to scrutiny. Jaffe has a real plan for the minimum
+      wage that does not cheat working San Franciscans. <em>You can change the inflation number to see how higher or lower inflation affects the minimum wage over time!</em>
+
+
+    </p>
+
+  </div>
+
+</div>
+
+
+<!---<div id="test"></div>-->
+
+<script src="jaffe-chart.js"></script>
+
+</body>
+</html>
