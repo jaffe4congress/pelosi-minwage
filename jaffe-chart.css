@@ -78,6 +78,10 @@ body {
   display:table-cell;
 }
 
+#group {
+  display:table;
+  font-family:'Sabo 27px';
+}
 .button #percent {
   font-size: 20px;
   border-right:1px black solid;
@@ -86,6 +90,10 @@ body {
   border-left:0;
   padding:3.5px;
   padding-left:0;
+  line-height:1;
+  text-align:center;
+  white-space: nowrap;
+  vertical-align:middle;
 
   background-color:rgba(0, 0, 255, 0.2);
   //height:18px;
@@ -94,8 +102,9 @@ body {
   border-top-left-radius: 0;
   color:#fffde5;
   display:inline;
-  width:30px;
-  //font-family:'Sabo 27px';
+  width:22px;
+  font-family:'Sabo 27px';
+  display:table-cell;
 }
 
 #increase {
@@ -106,7 +115,10 @@ body {
   grid-area:inc;
   width:300px;
   margin:0;
-  margin-left:10px;
+  //margin-left:10px;
+  padding:0;
+  display:table-cell;
+  vertical-align: top;
 }
 
 
@@ -128,6 +140,7 @@ body {
   border-radius:5px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  display:table-cell;
 }
 
 #inflation {
@@ -144,6 +157,7 @@ body {
   //margin-left:5px;
   font-size: 20px;
   //border-radius:5px;
+  display:table-cell;
 
   background-color:rgba(255, 255, 255, 0.1);
   color:#fffde5;
