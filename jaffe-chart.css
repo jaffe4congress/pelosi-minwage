@@ -1,11 +1,12 @@
 
-
 body {
   background-color:#007ae5;
   color:#fffde5;
   font-family:'Slabo 27px',sans-serif;
   font-weight:normal;
   font-style:normal;
+  width:100%;
+  margin:0;
 }
 
 .header {
@@ -15,6 +16,7 @@ body {
   //text-shadow: 1px 1px #ccc;
   //text-transform:uppercase;
   margin-bottom:0;
+
 }
 
 .caption {
@@ -50,7 +52,8 @@ body {
 .wrapper {
   margin:auto;
   background-color:#007ae5;
-  width:60%;
+  width:60% ;
+  max-width: 1024px;
 
 }
 
@@ -203,6 +206,7 @@ header {
     grid-area: main;
     margin-bottom:-20px;
     //margin-bottom:5px;
+
 }
 .sidebar {
     grid-area: sd;
