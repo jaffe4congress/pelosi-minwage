@@ -119,28 +119,26 @@ body {
   padding:0;
   display:table-cell;
   vertical-align: top;
+
 }
 
 
 #inflate_btn {
-  //border:0;
-  //margin:0;
-  //padding:5px;
   width:220px;
   height:32px;
   font-size:20px;
   border:1px #0056a3 solid;
   border-right:0;
-  //font-family:'Oswald';
   background-color:rgba(255, 66, 66,.85);
   //color:#007ae5;
   //color:#fffde5;
   color:#fff;
   letter-spacing: 2px;
-  border-radius:5px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   display:table-cell;
+  padding-left:0 !important;
+  padding-right:0 !important;
 }
 
 #inflation {
@@ -158,6 +156,8 @@ body {
   font-size: 20px;
   //border-radius:5px;
   display:table-cell;
+  border-radius:0;
+  //-webkit-appearance: none;
 
   background-color:rgba(255, 255, 255, 0.1);
   color:#fffde5;
@@ -181,12 +181,15 @@ canvas {
 header {
   font-family: 'Oswald', sans-serif;
   font-size:45px;
-  font-weight:bold;
-  margin-bottom:5px;
+  //font-weight:bold;
   letter-spacing: 5px;
-  font-weight:800;
+  //font-weight:800;
   text-transform: uppercase;
-  font-style:normal;
+  font-style:normal !important;
+  margin:0 !important;
+  padding:0 !important;
+  margin-bottom:5px !important;
+  width:800px;
 }
 
 .footer {
