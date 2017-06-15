@@ -35,7 +35,7 @@ body {
   grid-area: bl;
 }
 
-.wrapper {
+/*.wrapper {
     display: grid;
     background-color:#007ae5;
     grid-template-columns: repeat(10, 1fr);
@@ -45,12 +45,37 @@ body {
       ". . sd sd sd sd sd sd . ."
       ". . main main main main main main . .";
 
+}*/
+
+.wrapper {
+  margin:auto;
+  background-color:#007ae5;
+  width:60%;
+
 }
+
+/*.wrapper2 {
+  width:800px;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-areas:
+    "inc inc inc inc inc inc inc inc inc inc button button button button button button button button"
+}*/
+
+.wrapper2 {
+  //margin:auto;
+  width:800px;
+  display:table;
+}
+
 
 .button {
   grid-area: button;
   font-size:20px;
   font-family:'Sabo 27px',sans-serif;
+  width:300px;
+  display:table-cell;
 }
 
 .button #percent {
@@ -72,6 +97,18 @@ body {
   width:30px;
   //font-family:'Sabo 27px';
 }
+
+#increase {
+  border:0;
+  display:table-cell;
+  //background-color:#fff;
+  font-size:16px;
+  grid-area:inc;
+  width:300px;
+  margin:0;
+  margin-left:10px;
+}
+
 
 #inflate_btn {
   //border:0;
@@ -117,14 +154,7 @@ body {
   grid-area: text;
 }
 
-.wrapper2 {
-  width:800px;
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-auto-rows: minmax(50px, auto);
-  grid-template-areas:
-    "inc inc inc inc inc inc inc inc inc inc button button button button button button button button"
-}
+
 
 canvas {
   border:0px solid #d3d3d3;
@@ -240,12 +270,7 @@ p {
   margin-bottom:50px;
 }
 
-#increase {
-  border:0;
-  //background-color:#fff;
-  font-size:16px;
-  grid-area:inc;
-}
+
 
 
 div {
