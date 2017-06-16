@@ -48,13 +48,29 @@ var browser = function() {
 
 browser = browser();
 
+var getCanvasChartSize = function(){
+
+  var windowWidth=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  var windowHeight=window.innerHeight || document.documentElement.clientHeight ||document.body.clientHeight;
+
+  return {
+    width:(windowWidth-50 >= 780) ? 693 : windowWidth-50,
+    height:(windowHeight-300 >= 520) ? 520 : windowHeight-300
+  }
+
+}
+
+var windowDetails = getCanvasChartSize();
+
+
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 // the following 5 lines fixes the blur on Retina monitors
 c.width=1560;
 c.height=1040;
-c.style.width="780px";
-c.style.height="520px";
+c.style.width= windowDetails.width + "px";
+c.style.height= windowDetails.height + "px";
 ctx.scale(2,2);
 var wageIncrease = [7.25, 9.25, 10.10, 11.00, 12.00, 13.00, 13.50, 14.20, 15.00];
 var inflation = document.getElementById("inflation").value / 100;
