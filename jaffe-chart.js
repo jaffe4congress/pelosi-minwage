@@ -88,10 +88,10 @@ var spacing = 9;
 var swidth = 80;
 
 if (browser == "bad") {
-  var test = setTimeout(drawAxis, 500);
+  var test = setTimeout(drawAxis, 800);
 
 } else {
-  var test = setTimeout(drawAxis, 100);
+  var test = setTimeout(drawAxis, 500);
 }
 
 pelosiBars(wageIncrease, w, h, spacing, swidth);
