@@ -55,8 +55,8 @@ var getCanvasChartSize = function(){
   var windowHeight=window.innerHeight || document.documentElement.clientHeight ||document.body.clientHeight;
 
   return {
-    width:(windowWidth-50 >= 780) ? 693 : windowWidth-50,
-    height:(windowHeight-300 >= 520) ? 520 : windowHeight-300
+    width:(windowWidth-50 >= 780) ? 780 : windowWidth-50,
+    height:(windowHeight-150 >= 520) ? 520 : windowHeight-300
   }
 
 }
@@ -91,7 +91,7 @@ pelosiBars(wageIncrease, w, h, spacing, swidth);
 
 function drawAxis() {
   // x-axis (year axis)
-  ctx.strokeStyle = '#484f59';
+  ctx.strokeStyle = '#272b30';
   ctx.setLineDash([1,4]);
   //ctx.lineWidth = 1;
   ctx.beginPath();
@@ -113,7 +113,7 @@ function drawAxis() {
 
 
   // y-axis (money axis)
-  ctx.strokeStyle = 'black';
+  ctx.strokeStyle = '#272b30';
   ctx.beginPath();
   ctx.moveTo(700,10);
   ctx.lineTo(700,475);
@@ -128,7 +128,7 @@ function drawAxis() {
 
 
 
-    ctx.strokeStyle = '#5d5e5e';
+    ctx.strokeStyle = '#272b30';
     //ctx.setLineDash([1,4]);
     ctx.beginPath();
     ctx.moveTo(700,19+i);
@@ -138,14 +138,14 @@ function drawAxis() {
     i=i+50;
   }
   // labels
-  ctx.font = ".9em Oswald";
+  ctx.font = "1.5em Oswald";
   ctx.fillStyle="#fffde5";
   ctx.fillText("Years",300,515);
 
   ctx.save();
   ctx.translate(0,300);
   ctx.rotate(-Math.PI/2);
-  ctx.font = ".9em Oswald";
+  ctx.font = "1.5em Oswald";
   ctx.fillStyle="#fffde5";
   ctx.fillText("Minimum Wage in US Dollars",0,760);
   ctx.restore();
@@ -253,19 +253,19 @@ function inflationBars(inflation, wageIncrease, w, h, spacing, swidth) {
   }
   // create a legend
   ctx.setLineDash([0,0]);
-  ctx.strokeRect(15,42,140,55);
+  ctx.strokeRect(15,42,220,55);
 
   ctx.fillStyle="#ff3a3a";
   ctx.fillRect(20,50,25,15);
-  ctx.font = ".7em Oswald";
+  ctx.font = "1em Oswald";
   ctx.fillStyle="#fffde5";
-  ctx.fillText("Actual Minimum Wage",50,60);
+  ctx.fillText("Real Minimum Wage",50,60);
 
   ctx.fillStyle="#71b1d6";
   ctx.fillRect(20,75,25,15);
-  ctx.font = ".7em Oswald";
+  ctx.font = "1em Oswald";
   ctx.fillStyle="#fffde5";
-  ctx.fillText("Pelosi Minimum Wage",50,87);
+  ctx.fillText("Pelosi's Promised Minimum Wage",50,87);
 
   window.requestAnimationFrame(draw);
 
@@ -289,7 +289,7 @@ document.getElementById("inflate_btn").addEventListener("click",function(){
   inflationBars(inflation,wageIncrease, w, h, spacing, swidth);
   document.getElementById("footer").style.display = 'block';
   //document.getElementById("increase").style.display = 'none';
-  window.scrollTo(0,200);
+  window.scrollTo(0,400);
 
 
 })
