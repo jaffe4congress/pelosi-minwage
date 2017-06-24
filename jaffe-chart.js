@@ -296,6 +296,7 @@ document.getElementById("inflate_btn").addEventListener("click",function(){
   h=0;
   //ctx.beginPath();
   inflation = document.getElementById("inflation").value / 100;
+  document.getElementById("footer_inflate").innerHTML=(inflation*100).toFixed(1);
   drawAxis();
   fadedPelosiBars(wageIncrease, w, h, spacing, swidth);
   //draw();

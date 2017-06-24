@@ -213,6 +213,10 @@ header {
   color: #fc0202;
 }
 
+#footer_inflate {
+  color: #007ae5 !important;
+}
+
 #footer strong {
   font-size: 18px;
   color: #fc0202;
