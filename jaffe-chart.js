@@ -272,7 +272,7 @@ function inflationBars(inflation, wageIncrease, w, h, spacing, swidth) {
   ctx.fillRect(20,50,25,15);
   ctx.font = "1em Oswald";
   ctx.fillStyle="#fffde5";
-  ctx.fillText("Real Minimum Wage",50,60);
+  ctx.fillText("Pelosi's Real Minimum Wage",50,60);
 
   ctx.fillStyle="#71b1d6";
   ctx.fillRect(20,75,25,15);
