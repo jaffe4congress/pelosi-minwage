@@ -54,10 +54,18 @@ var getCanvasChartSize = function(){
 
   var windowHeight=window.innerHeight || document.documentElement.clientHeight ||document.body.clientHeight;
 
-  return {
-    width:(windowWidth-50 >= 780) ? 780 : windowWidth-50,
-    height:(windowHeight-150 >= 520) ? 520 : windowHeight-300
-  }
+
+    if (windowWidth > windowHeight) {
+      return {
+      width:(windowWidth-50 >= 780) ? 780 : windowWidth-200,
+      height:(windowHeight-100 >= 520) ? 520 : windowHeight-100
+      }
+    } else {
+      return {
+      width:(windowWidth-50 >= 780) ? 780 : windowWidth-100,
+      height:(windowHeight-100 >= 520) ? 520 : windowHeight-350
+      }
+    }
 
 }
 
@@ -67,8 +75,8 @@ var windowDetails = getCanvasChartSize();
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 // the following 5 lines fixes the blur on Retina monitors
-c.width=1560;
-c.height=1040;
+c.width=780*2;
+c.height=520*2;
 c.style.width= windowDetails.width + "px";
 c.style.height= windowDetails.height + "px";
 ctx.scale(2,2);
@@ -88,6 +96,11 @@ if (browser == "bad") {
 
 pelosiBars(wageIncrease, w, h, spacing, swidth);
 
+
+function redraw() {
+  drawAxis();
+  pelosiBars(wageIncrease, w, h, spacing, swidth);
+}
 
 function drawAxis() {
   // x-axis (year axis)
@@ -292,4 +305,15 @@ document.getElementById("inflate_btn").addEventListener("click",function(){
   window.scrollTo(0,400);
 
 
-})
+});
+
+window.addEventListener("resize", function(){
+
+  var windowDetails = getCanvasChartSize();
+
+  c.style.width= windowDetails.width + "px";
+  c.style.height= windowDetails.height + "px";
+
+  //redraw();
+
+},false);

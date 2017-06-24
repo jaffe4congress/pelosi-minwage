@@ -1,5 +1,6 @@
+@media only screen and (min-width: 300px) and (max-width: 768px) {
 
-@media only screen and (min-width: 768px) {
+
 body {
   background-color:#007ae5;
   color:#fffde5;
@@ -9,6 +10,8 @@ body {
   width:100%;
   margin:0;
 }
+
+body:after{content:"768px and smaller"}
 
 .header {
   padding-bottom:0px;
@@ -23,14 +26,14 @@ body {
 .caption {
   padding:5px 5px 5px 15px;
   margin-top: 10px;
-  text-align: left;
+  text-align: justify;
   color: #015baa;
-  margin-left: 19%;
-  margin-right: 19%;
+  /*margin-left: 19%;
+  margin-right: 19%;*/
   background-color: #ffffff;
   text-shadow:none;
   margin-bottom:9px;
-  border-radius:10px;
+  /*border-radius:10px;*/
   font-size:25px;
 }
 
@@ -49,9 +52,9 @@ body {
 
 
 .wrapper2 {
-  width:62%;
+  width:100%;
   margin: auto;
-  display:table;
+  /*display:table;*/
   margin-top: 30px;
   margin-bottom: 30px;
   font-family: 'Slabo 27px',sans-serif;
@@ -59,13 +62,15 @@ body {
 
 
 .button {
-    grid-area: button;
     font-size: 20px;
     font-family: 'Slabo 27px',sans-serif;
     /*display: table-cell; */
     padding: 0px;
     padding-left: 5%;
     margin: auto;
+    margin-left: 10%;
+    display: block;
+    margin-top: 20px;
     /*float: right;*/
 }
 
@@ -101,15 +106,17 @@ body {
   /*float: left;*/
   margin: auto;
   border:0;
-  display:table-cell;
+  /*display:table-cell;*/
   font-size:16px;
   grid-area:inc;
-  width:72%;
+  /*width:72%;*/
+  display: block;
   margin:0;
   padding:0;
-  display:table-cell;
+  padding-left: 3%;
+  padding-right: 3%;
   vertical-align: top;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   font-size: 17px;
 }
@@ -125,7 +132,7 @@ body {
     border-radius: 5px;
     /*border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;*/
-    display: table-cell;
+    /*display: table-cell;*/
     float: left;
     padding-left: 10px !important;
     padding-right: 10px !important;
@@ -192,11 +199,11 @@ header {
   text-align:justify;
   color: #007ae5;
   background-color: #ffffff;
-  margin-left:19%;
-  margin-right:19%;
+  /*margin-left:19%;
+  margin-right:19%;*/
   text-shadow:none;
   padding-left:15px;
-  border-radius:5px;
+  /*border-radius:5px;*/
   font-size:20px !important;
 }
 
@@ -226,5 +233,4 @@ p {
   margin:0;
   margin-bottom:50px;
 }
-
 }
